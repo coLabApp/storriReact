@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/coLabApp/storriReact.git/static/css/main.b62cccbe.chunk.css",
-    "main.js": "/coLabApp/storriReact.git/static/js/main.e8692ea5.chunk.js",
-    "main.js.map": "/coLabApp/storriReact.git/static/js/main.e8692ea5.chunk.js.map",
+    "main.js": "/coLabApp/storriReact.git/static/js/main.11e92e2a.chunk.js",
+    "main.js.map": "/coLabApp/storriReact.git/static/js/main.11e92e2a.chunk.js.map",
     "runtime-main.js": "/coLabApp/storriReact.git/static/js/runtime-main.7cd82b94.js",
     "runtime-main.js.map": "/coLabApp/storriReact.git/static/js/runtime-main.7cd82b94.js.map",
-    "static/js/2.18be03ab.chunk.js": "/coLabApp/storriReact.git/static/js/2.18be03ab.chunk.js",
-    "static/js/2.18be03ab.chunk.js.map": "/coLabApp/storriReact.git/static/js/2.18be03ab.chunk.js.map",
+    "static/js/2.422695d2.chunk.js": "/coLabApp/storriReact.git/static/js/2.422695d2.chunk.js",
+    "static/js/2.422695d2.chunk.js.map": "/coLabApp/storriReact.git/static/js/2.422695d2.chunk.js.map",
     "index.html": "/coLabApp/storriReact.git/index.html",
     "static/css/main.b62cccbe.chunk.css.map": "/coLabApp/storriReact.git/static/css/main.b62cccbe.chunk.css.map",
-    "static/js/2.18be03ab.chunk.js.LICENSE.txt": "/coLabApp/storriReact.git/static/js/2.18be03ab.chunk.js.LICENSE.txt"
+    "static/js/2.422695d2.chunk.js.LICENSE.txt": "/coLabApp/storriReact.git/static/js/2.422695d2.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7cd82b94.js",
-    "static/js/2.18be03ab.chunk.js",
+    "static/js/2.422695d2.chunk.js",
     "static/css/main.b62cccbe.chunk.css",
-    "static/js/main.e8692ea5.chunk.js"
+    "static/js/main.11e92e2a.chunk.js"
   ]
 }
