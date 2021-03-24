@@ -64,8 +64,6 @@ function QuestionBoard() {
 
     const [currentQuestionId, setQuestion] = useState(0);
     const [userInput, setUserInput] = useState([]);
-    const userQuestionTextarea = useRef('');
-    const [userQuestionText, setuserQuestionText] = useState('');
     const [progressPercentage, setWidth] = useState(0)
 
     const currentQuestion = questions[currentQuestionId];
@@ -77,6 +75,7 @@ function QuestionBoard() {
         const newStyle = progressPercentage + 15;
 
 
+
        
         if (nextId >= questions.length){
             nextId = 7;
@@ -85,7 +84,16 @@ function QuestionBoard() {
         setWidth(newStyle)
     }
 
-    const { handleChange, handleSubmit } = useHandleInput('');
+    const handleInput = (e) =>{
+         setUserInput([...userInput, e.target.value])
+
+
+    }
+
+
+    // const { handleChange, handleSubmit } = useHandleInput('');
+
+
 
     
   return (
@@ -94,8 +102,8 @@ function QuestionBoard() {
             <div className="container">
                 <div className="questionBoard active"  >
                     <div className="questionContainer" >
-                        <input className="questionTitle" type="text"  onChange={handleChange}value={currentQuestion.question}></input>
-                <textarea className="questionText" id="questionText" onChange={handleChange} >{currentQuestion.textarea}</textarea>
+                        <input className="questionTitle" type="text"  onChange={handleInput} value={currentQuestion.question}></input>
+                        <textarea className="questionText" id="questionText" onChange={handleInput} >{currentQuestion.textarea}</textarea>
                     </div>
                     <div className="barContainer" >
                         <div className="bar" style={{ width: progressPercentage + "%" }} />
