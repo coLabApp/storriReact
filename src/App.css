@@ -96,59 +96,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
         flex-direction: column;
     }
       
-      .progressContainer {
-        display: flex;
-        justify-content: space-between;
-        position: relative;
-        margin-bottom: 30px;
-        max-width: 100%;
-        width: 450px;
-      }
-      
-      .progressContainer::before {
-        content: '';
-        background-color: #e0e0e0;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        height: 4px;
-        width: 100%;
-        z-index: -1;
-      }
-      
-      /* this is the grey line on the progress bar and this is position relative*/
-      
-      .progress {
-        background-color: #3498db;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        height: 4px;
-        width: 0%;
-        z-index: -1;
-        transition: 0.4s ease;
-      }
-      
-      /* this is progress and it is blue line which position absolute which is relative to the progress container */
-      
-      .circle {
-        background-color: #fff;
-        color: #999;
-        border-radius: 50%;
-        height: 30px;
-        width: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 3px solid #e0e0e0;
-        transition: 0.4s ease;
-      }
-      
-      .circle.color {
-        border-color: #3498db;
-      }
+   
+
     
 
     .btnContainer{
@@ -212,6 +161,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
         order:0;
         
     } */
+
+    .mainSection{
+        display:none;
+    }
 
     .sectionContainer{
         display:flex;

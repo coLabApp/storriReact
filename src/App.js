@@ -5,70 +5,28 @@ import { useState, useEffect, useRef } from 'react';
 import QuestionBoard from './QuestionBoard'
 
 function App() {
-  const [question, setQuestion] = useState(
-    [{
-      id:0,
-      question:"Who was there / were you with anyone?",
-      textarea:""
-  
-  },
-  {
-      id:1,
-      question:"Where were you / Where did this take place?",
-      textarea:""
-  
-  },
-  {
-      id:2,
-      question:"What happened?",
-      textarea:""
-  
-  },
-  {
-      id:3,
-      question:"What could you see? What could you hear? What could you feel? What could you smell?",
-      textarea:""
-  
-  },
-  {
-      id:4,
-      question:"Think about how you could bring the characters in your story to life?",
-      textarea:""
-  
-  }, {
-      id:5,
-      question:"Do you have photo or video of any aspect or characters in this story?",
-      textarea:""
-  
-  },
-  {
-      id:6,
-      question:"What do you this this story could represent or symbolize?",
-      textarea:""
-  
-  },
-  {
-      id:7,
-      question:"What is the point of this story? [Think: /*The reason I'm telling you this is because _____*/] ",
-      textarea:""
+
+  const [show, setShow] = useState(false)
+  const [display, setDisplay] = useState('')
+
+  const newStory = () =>{
+    const changeDisplay = display + "none";
+    setShow(!show)
+    if(!show){
+      setDisplay(changeDisplay)
+    }
+
   }
-  // {
-  //     id:8,
-  //     question:"blank",
-  //     textarea:document.getElementById('questionText').value
-  // },
-  // {
-  //     id:9,
-  //     question:"blank",
-  //     textarea:document.getElementById('questionText').value
-  // },
-  ]
-  )
 
   return (
     <div className="App">
       <Header />
-      <QuestionBoard />
+      {
+        show?<QuestionBoard />:null
+      }
+      <button style={{display: display}} onClick={newStory}>New story</button>
+
+      
     </div>
   );
 }
