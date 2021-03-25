@@ -10,11 +10,11 @@ function App() {
   const [display, setDisplay] = useState('')
 
   const newStory = () =>{
-    const changeDisplay = display + "none";
+    // const changeDisplay = display + "none";
     setShow(!show)
-    if(!show){
-      setDisplay(changeDisplay)
-    }
+    // if(!show){
+    //   setDisplay(changeDisplay)
+    // }
 
   }
 
@@ -24,7 +24,7 @@ function App() {
       {
         show?<QuestionBoard />:null
       }
-      <button style={{display: display}} onClick={newStory}>New story</button>
+      <button className="newBtn" style={{display: display}} onClick={newStory}> + New question</button>
 
       
     </div>

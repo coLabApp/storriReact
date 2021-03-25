@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
-import useHandleInput from './useHandleInput'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 function QuestionBoard() {
 
@@ -79,7 +79,7 @@ function QuestionBoard() {
 
         // setUserInput([currentQuestion.question.value, currentQuestion.textarea.value])
         const nextId = currentQuestionId + 1;
-        const newStyle = progressPercentage + 15;
+        const newStyle = progressPercentage + 14;
         const display = toggleState + "none"
         const show = showContainer + "grid"
         if(userInput[1] !== ""){
@@ -113,17 +113,22 @@ function QuestionBoard() {
             <div className="container" style={{display: toggleState}}>
                 <div className="questionBoard active"  >
                     <div className="questionContainer" >
-                        <input className="questionTitle" type="text"  onChange={handleInput} value={currentQuestion.question}></input>
-                        <textarea className="questionText" id="questionText" onChange={handleInput} value={currentValue} ></textarea>
+                        <div className="inputContainer">
+                            <input className="questionTitle" type="text"  onChange={handleInput} placeholder={currentQuestion.question}></input>
+                        </div>
+                        <div className="textareaContainer">
+                            <textarea className="questionText" id="questionText" onChange={handleInput} value={currentValue} ></textarea>
+                        </div>
                     </div>
+                    <div className="btnsContainer">
                     <div className="barContainer" >
                         <div className="bar" style={{ width: progressPercentage + "%" }} />
                     </div>
-
-                <div className="btnContainer " onClick={nextQuestion}>
-                    <button className="nextBtn">Next</button>
+                    <div className="btnContainer " onClick={nextQuestion}>
+                        <button className="nextBtn">Continue</button>
+                    </div>
+                    </div>
                 </div>
-            </div>
 
         </div>
         <div className="mainSection"style={{display: showContainer}}>
