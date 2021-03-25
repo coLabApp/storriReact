@@ -230,6 +230,11 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
         height:200px; */
     }
 
+    .userAnswer{
+        display:grid;
+
+    }
+
 
 
         
@@ -257,6 +262,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
        /* use to show a container */
     .show{
         display:flex;
+    }
+
+    .storyBoardSection{
+        display:none;
     }
 
 
