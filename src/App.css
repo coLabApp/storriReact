@@ -105,7 +105,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     }
 
     textarea{
-        font-size:1.7rem;
+        font-size:1.5rem;
         width:550px;
         height:120px;
     }
