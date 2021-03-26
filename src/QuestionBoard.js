@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
-import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import StoryBoard from './StoryBoard';
 
 function QuestionBoard() {
@@ -74,18 +73,14 @@ function QuestionBoard() {
     const [currentValue, setCurrentValue] = useState("")
 
     const nextQuestion = () =>{
-        const newVar = [currentQuestion.question,currentValue];
+        const newVar = ([currentValue, currentQuestion.question]);
         setUserInput([...userInput, newVar]);
         setCurrentValue('')
 
-        // setUserInput([currentQuestion.question.value, currentQuestion.textarea.value])
         const nextId = currentQuestionId + 1;
         const newStyle = progressPercentage + 14;
         const display = toggleState + "none"
         const show = showContainer + "grid"
-        // if(userInput[1] !== ""){
-        //     setUserInput([...userInput, newVar]) 
-        // }  else {setResponse([...response, questions[currentQuestionId]])}
 
        
         if (nextId > 7){
@@ -102,10 +97,6 @@ function QuestionBoard() {
 
 
 
-    // const { handleChange, handleSubmit } = useHandleInput('');
-
-
-
     
   return (
     <div>
@@ -117,7 +108,8 @@ function QuestionBoard() {
                             <input className="questionTitle" type="text"  onChange={handleInput} placeholder={currentQuestion.question}></input>
                         </div>
                         <div className="textareaContainer">
-                            <textarea className="questionText" id="questionText" onChange={handleInput} value={currentValue} ></textarea>
+                            <h3>Notes</h3>
+                            <textarea className="questionText" id="questionText" onChange={handleInput} value={currentValue} placeholder="Describe the place" ></textarea>
                         </div>
                     </div>
                     <div className="btnsContainer">

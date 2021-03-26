@@ -24,7 +24,7 @@ function App() {
       {
         show?<QuestionBoard />:null
       }
-      <button className="newBtn" style={{display: display}} onClick={newStory}> + New question</button>
+      <button className="newBtn" style={{display: display}} onClick={newStory}> + Add an idea</button>
 
       
     </div>
