@@ -19,12 +19,12 @@ function StoryBoard(props) {
 
 
   return (
-    <div className="Storyboard">
+    <div className="storySection">
       <main>
         <section>
           <div className="sectionContainer">
               <div className="wrapper">
-              <div className="storyBoard">
+              <div className="blue">
                     <div className="wrapper">
                         <h2>Writer's Room</h2>
                         <div className="saveContainer "id="saveContainer">
@@ -32,7 +32,7 @@ function StoryBoard(props) {
                               if(uservalue[0] !== ""){
                                 return (
                                 <div className="cards"key={uservalue.id}>
-                                <input type="text" className="userAnswerInput" value={uservalue[1].value}></input>
+                                <input type="text" className="userAnswerInput" value={uservalue[1]}></input>
                                 <textarea type="text" name="echoText" rows="1" cols="20" onChange={handleInput} className="userAnswerTextarea" value={uservalue[0]}></textarea>  
                                 </div>
                                 )
