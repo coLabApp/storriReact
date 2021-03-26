@@ -95,6 +95,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
         font-weight:500;
     }
 
+    h4{
+        font-size:1.5rem;
+    }
+
     input{
         width:550px;
         height:30px;
@@ -110,10 +114,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
         border: none;
         background-color: #3FA2F7;
         cursor: pointer;
-        font-weight:600;
+        font-weight:500;
         font-size: 2rem;
-        padding-left: 30px;
-        padding-right:30px;
+        padding-left: 20px;
+        padding-right:20px;
         border-radius: 5px;
         color:white;
     }
@@ -155,6 +159,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
     .questionTitle{
         border:1px solid black;
+        font-size:1.5rem;
     }
 
     .inputContainer{
@@ -199,7 +204,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
         width: 0;
         height: 5px;
         transition: width 0.3s;
-        background: #3498db ;
+        background:#004AAD;
       }
 
     /* main styles */
@@ -233,11 +238,12 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
         height:20px;
         display:flex;
         flex-wrap:wrap;
+        font-size:1.5rem;
     }
 
-    .h4{
+    h4{
         color:#A27841;
-        font-weight:500;
+        font-weight:600;
     }
 
     .mainSection{
@@ -321,5 +327,15 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
     .storyBoardSection{
         display:none;
     }
+
+    .sectionContainer button{
+        border: none;
+        background-color:white;
+        cursor: pointer;
+        font-weight:600;
+        font-size: 1.5rem;
+        color:rgb(14, 21, 31);
+    }
+
 
 

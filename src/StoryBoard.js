@@ -6,12 +6,12 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 function StoryBoard(props) {
 
 const [currentValue, setCurrentValue] = useState("");
-const [toggle, setToggle] = useState(false);
+const [toggle, setToggle] = useState("");
 
 const displayCards =  () =>{
-  const toggleButton = !toggle;
-
-  setToggle(toggleButton)
+    const changeToggle = toggle + "none";
+    setToggle(changeToggle)
+  
 }
 
 
@@ -20,19 +20,14 @@ const handleInput = (e) =>{
     setCurrentValue(e.target.value)
 }
 
-
-
-
-
-
   return (
     <div className="storySection">
       <main>
         <section>
           <div className="sectionContainer">
               <div className="wrapper">
-              <h2>Writer's Room <button> icon </button></h2>
-              <div className="blue">
+              <h2>Writer's Room <button onClick={displayCards}> <i class="fas fa-angle-down"></i> </button></h2>
+              <div className="blue" style={{display: toggle}}>
                     <div className="wrapper">
                         <div className="saveContainer "id="saveContainer">
                             <div className="userAnswer">{props.userInput.map((uservalue) =>{
@@ -50,7 +45,7 @@ const handleInput = (e) =>{
                         </div>
                     </div>
                 </div>
-                <h2>Blank Cards <button> icon </button></h2>
+                <h2>Blank Cards <button onClick={displayCards} > <i class="fas fa-angle-down"></i></button></h2>
                 <div className="storyContainer">
                   <div className="wrapper">
                       <div className="blankCards">
@@ -60,7 +55,7 @@ const handleInput = (e) =>{
                               return(
                                 <div className="cards"key={uservalue.id}>
                                 <h4>{uservalue[1]}</h4>
-                                <input type="text" className="userAnswerInput" value=""></input>
+                                <input type="text" className="userAnswerInput" ></input>
                                 <textarea type="text" className="userAnswerTextarea" name="echoText" rows="1" cols="20" onChange={handleInput}> </textarea>  
                                 </div>
                               )
@@ -70,23 +65,23 @@ const handleInput = (e) =>{
                     </div>
                   </div>
                 </div>
-                <h2>Beginning <button> icon </button></h2>
-                <div className="storyContainer">
+                <h2>Beginning <button  onClick={displayCards}> <i class="fas fa-angle-down"></i> </button></h2>
+                <div className="storyContainer" >
               <div className="wrapper">
 
                   <div className="storyBoard">
                   </div>
               </div>
             </div>
-            <h2>Middle <button> icon </button></h2>
-            <div className="storyContainer">
+            <h2>Middle <button onClick={displayCards}> <i class="fas fa-angle-down"></i> </button></h2>
+            <div className="storyContainer"  >
                 <div className="wrapper">
                     <div className="storyBoard">                             
                     </div>
                 </div>
             </div>
-                <h2>End <button> icon </button></h2>
-                  <div className="storyContainer">
+                <h2>End <button onClick={displayCards}> <i class="fas fa-angle-down"></i> </button></h2>
+                  <div className="storyContainer"  >
                       <div className="wrapper">
                           <div className="storyBoard">
                           </div>
