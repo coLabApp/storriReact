@@ -8,7 +8,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
         
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700:800&display=swap');
     
 
 
@@ -226,6 +226,16 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
         padding:10px;
         
     }
+
+    .userAnswerInput{
+        font-weight:500;
+    }
+
+    .userAnswerTextarea{
+        font-weight:400;
+    }
+
+
 
     .userAnswerInput,
     .userAnswerTextarea{
