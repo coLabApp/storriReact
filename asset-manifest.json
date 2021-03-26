@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/storriReact/static/css/main.50a3226f.chunk.css",
-    "main.js": "/storriReact/static/js/main.1bc3b76d.chunk.js",
-    "main.js.map": "/storriReact/static/js/main.1bc3b76d.chunk.js.map",
+    "main.css": "/storriReact/static/css/main.11fa6a1e.chunk.css",
+    "main.js": "/storriReact/static/js/main.64594806.chunk.js",
+    "main.js.map": "/storriReact/static/js/main.64594806.chunk.js.map",
     "runtime-main.js": "/storriReact/static/js/runtime-main.4bef589f.js",
     "runtime-main.js.map": "/storriReact/static/js/runtime-main.4bef589f.js.map",
     "static/js/2.58fb727e.chunk.js": "/storriReact/static/js/2.58fb727e.chunk.js",
     "static/js/2.58fb727e.chunk.js.map": "/storriReact/static/js/2.58fb727e.chunk.js.map",
     "index.html": "/storriReact/index.html",
-    "static/css/main.50a3226f.chunk.css.map": "/storriReact/static/css/main.50a3226f.chunk.css.map",
+    "static/css/main.11fa6a1e.chunk.css.map": "/storriReact/static/css/main.11fa6a1e.chunk.css.map",
     "static/js/2.58fb727e.chunk.js.LICENSE.txt": "/storriReact/static/js/2.58fb727e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4bef589f.js",
     "static/js/2.58fb727e.chunk.js",
-    "static/css/main.50a3226f.chunk.css",
-    "static/js/main.1bc3b76d.chunk.js"
+    "static/css/main.11fa6a1e.chunk.css",
+    "static/js/main.64594806.chunk.js"
   ]
 }
