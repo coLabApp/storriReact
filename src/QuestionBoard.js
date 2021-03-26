@@ -6,58 +6,99 @@ function QuestionBoard() {
 
     const questions = [{
         id:0,
-        question:"Who was there / were you with anyone?",
+        question:"Who was there?",
     
     },
     {
         id:1,
-        question:"Where were you / Where did this take place?",
-
+        question:"Who was there?",
     
     },
     {
         id:2,
-        question:"What happened?",
+        question:"Where were you?",
 
     
     },
     {
         id:3,
-        question:"What could you see? What could you hear? What could you feel? What could you smell?",
+        question:"Where were you?",
 
     
     },
     {
         id:4,
-        question:"Think about how you could bring the characters in your story to life?",
+        question:"When did it happen?",
 
     
-    }, {
+    },
+    {
+        id:4,
+        question:"When did it happen?",
+
+    
+    },
+    {
         id:5,
-        question:"Do you have photo or video of any aspect or characters in this story?",
+        question:"What happened?",
 
     
     },
     {
         id:6,
-        question:"What do you this this story could represent or symbolize?",
+        question:"What happened?",
 
     
     },
     {
         id:7,
-        question:"What is the point of this story? [Think: /*The reason I'm telling you this is because _____*/] ",
+        question:"Why this story?",
+
+    
+    }, {
+        id:8,
+        question:"Was there any dialogue?",
+
+    
+    },
+    {
+        id:9,
+        question:"What did u see?",
+
+    
+    },
+    {
+        id:10,
+        question:"What did u see?",
+
+    
+    },
+    {
+        id:11,
+        question:"What did u hear?",
  
     },
     {
-        id:8,
-        question:"blank",
+        id:12,
+        question:"What did u hear?",
+ 
+    },
+    {
+        id:13,
+        question:"What did u feel?",
+    },
+    {
+        id:14,
+        question:"What did u feel?",
+    },
+    {
+        id:15,
+        question:"What did you smell?",
+    },
+    {
+        id:16,
+        question:"What did you smell?",
     }
-    // {
-    //     id:9,
-    //     question:"blank",
-    //     textarea:document.getElementById('questionText').value
-    // },
     ]
 
     const [currentQuestionId, setQuestion] = useState(0);
@@ -66,24 +107,25 @@ function QuestionBoard() {
     const [toggleState, setToggleState] = useState("");
     const [showContainer, setShowContainer] = useState("")
 
-    const [response, setResponse] = useState([]);
+    const [response, setResponse] = useState("");
 
     const currentQuestion = questions[currentQuestionId];
     
     const [currentValue, setCurrentValue] = useState("")
 
     const nextQuestion = () =>{
-        const newVar = ([currentValue, currentQuestion.question]);
+        const newVar = ([currentValue, currentQuestion.question, response]);
         setUserInput([...userInput, newVar]);
-        setCurrentValue('')
+        setCurrentValue('');
+        setResponse('')
 
         const nextId = currentQuestionId + 1;
-        const newStyle = progressPercentage + 14;
+        const newStyle = progressPercentage + 8;
         const display = toggleState + "none"
         const show = showContainer + "grid"
 
        
-        if (nextId > 7){
+        if (nextId > 16){
             setToggleState(display)
             setShowContainer(show)
         }
@@ -95,6 +137,10 @@ function QuestionBoard() {
          setCurrentValue(e.target.value)
     }
 
+    const handleText =(e) =>{
+        setResponse(e.target.value)
+    }
+
 
 
     
@@ -104,12 +150,15 @@ function QuestionBoard() {
             <div className="container" style={{display: toggleState}}>
                 <div className="questionBoard active"  >
                     <div className="questionContainer" >
+                        <h3>{currentQuestion.question}</h3>
                         <div className="inputContainer">
-                            <input className="questionTitle" type="text"  onChange={handleInput} placeholder={currentQuestion.question}></input>
+                            <input className="questionTitle" type="text"  onChange={handleText} value={response}></input>
+                            <p>Give the card a memorable title</p>
                         </div>
                         <div className="textareaContainer">
                             <h3>Notes</h3>
-                            <textarea className="questionText" id="questionText" onChange={handleInput} value={currentValue} placeholder="Describe the place" ></textarea>
+                            <textarea className="questionText" id="questionText" onChange={handleInput} value={currentValue}></textarea>
+                            <p>or continue without answering</p>
                         </div>
                     </div>
                     <div className="btnsContainer">
