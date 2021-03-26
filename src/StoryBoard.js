@@ -26,8 +26,8 @@ const handleInput = (e) =>{
         <section>
           <div className="sectionContainer">
               <div className="wrapper">
-              <h2>Writer's Room <button onClick={displayCards}> <i class="fas fa-angle-down"></i> </button></h2>
-              <div className="blue" style={{display: toggle}}>
+              <h2>Writer's Room <button > <i class="fas fa-angle-down"></i> </button></h2>
+              <div className="blue" >
                     <div className="wrapper">
                         <div className="saveContainer "id="saveContainer">
                             <div className="userAnswer">{props.userInput.map((uservalue) =>{
@@ -48,7 +48,7 @@ const handleInput = (e) =>{
                 <h2>Blank Cards <button onClick={displayCards} > <i class="fas fa-angle-down"></i></button></h2>
                 <div className="storyContainer">
                   <div className="wrapper">
-                      <div className="blankCards">
+                      <div className="blankCards" style={{display: toggle}}>
                         <div className ="userAnswer">
                           {props.userInput.map((uservalue) =>{
                             if(uservalue[0] === ""){
@@ -65,7 +65,7 @@ const handleInput = (e) =>{
                     </div>
                   </div>
                 </div>
-                <h2>Beginning <button  onClick={displayCards}> <i class="fas fa-angle-down"></i> </button></h2>
+                <h2>Beginning <button  > <i class="fas fa-angle-down"></i> </button></h2>
                 <div className="storyContainer" >
               <div className="wrapper">
 
@@ -73,14 +73,14 @@ const handleInput = (e) =>{
                   </div>
               </div>
             </div>
-            <h2>Middle <button onClick={displayCards}> <i class="fas fa-angle-down"></i> </button></h2>
+            <h2>Middle <button > <i class="fas fa-angle-down"></i> </button></h2>
             <div className="storyContainer"  >
                 <div className="wrapper">
                     <div className="storyBoard">                             
                     </div>
                 </div>
             </div>
-                <h2>End <button onClick={displayCards}> <i class="fas fa-angle-down"></i> </button></h2>
+                <h2>End <button > <i class="fas fa-angle-down"></i> </button></h2>
                   <div className="storyContainer"  >
                       <div className="wrapper">
                           <div className="storyBoard">
