@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/storriReact/static/css/main.dabf89dd.chunk.css",
-    "main.js": "/storriReact/static/js/main.b9b107f0.chunk.js",
-    "main.js.map": "/storriReact/static/js/main.b9b107f0.chunk.js.map",
+    "main.js": "/storriReact/static/js/main.c8f925d5.chunk.js",
+    "main.js.map": "/storriReact/static/js/main.c8f925d5.chunk.js.map",
     "runtime-main.js": "/storriReact/static/js/runtime-main.4bef589f.js",
     "runtime-main.js.map": "/storriReact/static/js/runtime-main.4bef589f.js.map",
     "static/js/2.58fb727e.chunk.js": "/storriReact/static/js/2.58fb727e.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.4bef589f.js",
     "static/js/2.58fb727e.chunk.js",
     "static/css/main.dabf89dd.chunk.css",
-    "static/js/main.b9b107f0.chunk.js"
+    "static/js/main.c8f925d5.chunk.js"
   ]
 }
