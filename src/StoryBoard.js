@@ -7,12 +7,16 @@ function StoryBoard(props) {
 
 const [currentValue, setCurrentValue] = useState("");
 const [toggle, setToggle] = useState("");
+const [response, setResponse] = useState("");
 
 const displayCards =  () =>{
     const changeToggle = toggle + "none";
     setToggle(changeToggle)
   
 }
+
+// const userWriting = () =>{}
+
 
 
   
@@ -33,7 +37,7 @@ const handleInput = (e) =>{
                             <div className="userAnswer">{props.userInput.map((uservalue) =>{
                               if(uservalue[0] !== ""){
                                 return (
-                                <div className="cards"key={uservalue.id}>
+                                <div className="cards" draggable="true" onDragStart={props.handleDragStart} onDragOver={props.handleDragOver} onDrop={props.handleDrop} key={uservalue.id}>
                                 <h4>{uservalue[1]}</h4>
                                 <input type="text" className="userAnswerInput" value={uservalue[2]}></input>
                                 <textarea type="text" name="echoText" rows="1" cols="20" onChange={handleInput} className="userAnswerTextarea" value={uservalue[0]}></textarea>  
@@ -53,7 +57,7 @@ const handleInput = (e) =>{
                           {props.userInput.map((uservalue) =>{
                             if(uservalue[0] === ""){
                               return(
-                                <div className="cards"key={uservalue.id}>
+                                <div className="cards" draggable="true" onDragStart={props.handleDragStart} onDragOver={props.handleDragOver} onDrop={props.handleDrop} key={uservalue.id}>
                                 <h4>{uservalue[1]}</h4>
                                 <input type="text" className="userAnswerInput" ></input>
                                 <textarea type="text" className="userAnswerTextarea" name="echoText" rows="1" cols="20" onChange={handleInput}> </textarea>  
