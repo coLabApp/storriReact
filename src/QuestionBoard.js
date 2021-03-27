@@ -141,49 +141,7 @@ function QuestionBoard() {
         setResponse(e.target.value)
     }
 
-    const swapBoxes = (fromBox, toBox) => {
-        let questions = questions.slice();
-        let fromIndex = -1;
-        let toIndex = -1;
-    
-        for (let i = 0; i < questions.length; i++) {
-          if (questions[i].id === fromBox.id) {
-            fromIndex = i;
-          }
-          if (questions[i].id === toBox.id) {
-            toIndex = i;
-          }
-        }
-    
-        if (fromIndex != -1 && toIndex != -1) {
-          let { fromId, ...fromRest } = questions[fromIndex];
-          let { toId, ...toRest } = questions[toIndex];
-          questions[fromIndex] = { id: fromBox.id, ...toRest };
-          questions[toIndex] = { id: toBox.id, ...fromRest };
-    
-          this.setState({ questions: questions });
-        }
-      };
 
-      const handleDragStart = data => event => {
-        let fromBox = JSON.stringify({ id: data.id });
-        event.dataTransfer.setData("dragContent", fromBox);
-      };
-
-      const handleDragOver = data => event => {
-        event.preventDefault(); // Necessary. Allows us to drop.
-        return false;
-      };
-
-      const handleDrop = data => event => {
-        event.preventDefault();
-      
-        let fromBox = JSON.parse(event.dataTransfer.getData("dragContent"));
-        let toBox = { id: data.id };
-      
-        this.swapBoxes(fromBox, toBox);
-        return false;
-      };
 
 
       
@@ -220,10 +178,7 @@ function QuestionBoard() {
             </div>
         </div>
         <section className="storyBoardSection" style={{display: showContainer}}>
-        <StoryBoard  userInput={userInput}       
-      dragStart={handleDragStart}
-      dragOver={handleDragOver}
-      drop={handleDrop}/>
+        <StoryBoard  userInput={userInput}/>
         </section>
     </div>
   )
